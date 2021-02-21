@@ -1,0 +1,45 @@
+:root {
+    --primary: #0061ff;
+    --secondary: #1DB954;
+    --complementary: #ff9e00;
+    --dark: #252525;
+}
+
+p {
+    font-weight: 400;
+}
+
+.form {
+    margin: 3% 0% 5% 0%;
+    border-radius: 12px;
+    border: 1px solid #bebebe;
+    padding: 2%;
+}
+
+.form .form-head {
+    margin: 2% 0% 1% 0%;
+}
+
+.form input {
+    border: none;
+    border-bottom: 2px solid var(--dark);
+    border-radius: none;
+    width: 98%;
+    padding: 1% 0%;
+    font-weight: 400;
+    font-family: proxima-nova;
+    font-size: 100%;
+}
+
+.form button {
+    margin-top: 3%;
+    width: 100%;
+    padding: 3%;
+    font-weight: 700;
+    font-family: proxima-nova;
+    font-size: 100%;
+    border-radius: 4px;
+    color: #fff;
+    background-color: var(--primary);
+    border: none;
+}
