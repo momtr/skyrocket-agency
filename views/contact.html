@@ -20,14 +20,14 @@
     <main class="contact pd">
         <div class="max pad">
             <h1>Contact</h1>
-            <p>We'll take time for you and contact you within one day.</p>
+            <p>Hi! We'll take time for you and contact you within one day.</p>
             <div class="form">
                 <div class="form-head">Name</div>
                 <input type="text" placeholder="Frank Coolman" id="name">
                 <div class="form-head">Email</div>
                 <input type="text" placeholder="frank@coolman.com" id="email">
-                <div class="form-head">Platform type</div>
-                <input type="text" placeholder="Photo sharing platform" id="platform-type">
+                <div class="form-head">Describe your project</div>
+                <input type="text" placeholder="Business website" id="platform-type">
                 <div class="form-head">Comment</div>
                 <input type="text" placeholder="..." id="comment">
                 <button id="btn">send</button>
@@ -80,13 +80,15 @@
                     platformType: $('#platform-type').val(),
                     comment: $('#comment').val(),
                 }
-                fetch(`/contact?name=${data.name}&email=${data.email}&platformType=${data.platformType}&comment=${data.comment}`, {
-                    method: 'POST'
-                }).then(res => {
-                    $('.form').html('<h1>Sent :)</h1>')
-                }).catch(err => {
-                    $('.form').html('<h1>Error occured while sending. Please try writing an email.</h1>')
-                })
+                if(data.name && data.email && data.platformType) {
+                    fetch(`/contact?name=${data.name}&email=${data.email}&platformType=${data.platformType}&comment=${data.comment}`, {
+                        method: 'POST'
+                    }).then(res => {
+                        $('.form').html('<h1>Sent :)</h1>')
+                    }).catch(err => {
+                        $('.form').html('<h1>Error occured while sending. Please try writing an email.</h1>')
+                    })
+                }
             })
         })
     </script>

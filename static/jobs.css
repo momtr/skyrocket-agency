@@ -1,0 +1,52 @@
+:root {
+    --primary: #0061ff;
+    --secondary: #1DB954;
+    --complementary: #ff9e00;
+    --dark: #252525;
+}
+
+.job-list {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.job {
+    margin: 2%;
+    padding: 3%;
+    flex: 1 0 25%;
+    border: 1px solid rgb(189, 193, 199);
+    border-radius: 12px;
+    box-shadow: rgb(1 14 40 / 5%) 0px 2px 4px;
+}
+
+.job hr {
+    border: none;
+    border-bottom: 4px solid var(--primary);
+}
+
+.job .job-name {
+    font-size: 130%;
+}
+
+.job .job-location {
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+.job .job-description {
+    margin-top: 5%;
+    color: #5b6987;
+    font-weight: 400;
+}
+
+.job .job-hourly-rate {
+    margin-top: 5%;
+    text-align: center;
+    background-color: var(--secondary);
+    color: #fff;
+    border-radius: 12px;
+    padding: 2%;
+    font-weight: 400;
+}

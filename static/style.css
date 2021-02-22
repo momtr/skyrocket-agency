@@ -5,11 +5,19 @@
     --dark: #252525;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: proxima-nova;
     font-weight: 700;
     font-size: 120%;
+}
+
+p {
+    font-weight: 400;
 }
 
 .max {
@@ -74,11 +82,31 @@ footer {
     width: 17%;
 }
 
+.bottom-link {
+    position: absolute;
+    bottom: 25vh;
+    left: 50%;
+}
+
+.bottom-link a {
+    text-align: center;
+    color: var(--primary);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: -50%;
+    text-decoration: none !important;
+}
+
+.bottom-link a:hover {
+    border-bottom: 4px solid var(--primary);
+    transition: border-bottom .1s;
+}
+
 .bg {
     /*background-image: linear-gradient(#2c5e92 0%, #552f6d 80%);*/
     background-color: #031b4e;
     color: #fff;
-    min-height: 85vh;
 }
 
 .bg-light {
@@ -118,8 +146,8 @@ footer {
 
 .sides-right button {
     border-radius: 24px;
-    color: var(--primary);
-    background-color: transparent;
+    color: #fff;
+    background-color: var(--primary);
     border: 3px solid var(--primary);
     text-align: center;
     font-family: proxima-nova;
@@ -130,19 +158,19 @@ footer {
 }
 
 .btn-icon svg {
-    fill: var(--primary);
+    fill: #fff;
     width: 10%;
 }
 
 .action-btn:hover button {
-    color: #fff;
-    background-color: var(--primary);
+    color: var(--primary);
+    background-color: #fff;
     transition: color .5s;
     transition: background-color .5s;
 }
 
 .action-btn:hover .btn-icon svg {
-    fill: #fff;
+    fill: var(--primary);
     transition: fill .5s;
 }
 
@@ -315,7 +343,7 @@ svg .checkmark {
 }
 
 .card-icon {
-    flex: 0 1 20%;
+    flex: 0 0 20%;
     width: 10%;
 }
 
@@ -350,4 +378,46 @@ svg .checkmark {
     width: 100%;
     font-family: proxima-nova;
     font-weight: 700;
+}
+
+/** profiles */
+.profile-list {
+    margin-top: 5%;
+    display: flex;
+}
+
+.profile {
+    padding: 2%;
+    margin: 1%;
+    flex: 1 1;
+    border-radius: 12px;
+    border: 1px solid rgb(229, 232, 237);
+    box-shadow: rgb(1 14 40 / 5%) 0px 2px 4px;
+}
+
+.profile .profile-image {
+    margin: 2% auto;
+    width: 80%;
+}
+
+.profile .profile-name {
+    margin-top: 10%;
+    color: var(--primary);
+}
+
+.profile .profile-position {
+    text-transform: uppercase;
+    margin-top: 3%;
+    font-size: 90%;
+}
+
+.profile .profile-about {
+    margin-top: 5%;
+    color: #5b6987;
+    font-weight: 400;
+}
+
+.profile-github {
+    margin-top: 5%;
+    width: 10%;
 }
